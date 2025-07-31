@@ -1,2 +1,2 @@
 # Projects
-My coding projects 
+I will be updating this repo with my coding projects
