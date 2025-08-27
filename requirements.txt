@@ -2,3 +2,4 @@ streamlit
 python-dotenv
 google-api-core
 langchain
+langchain_google_genai
