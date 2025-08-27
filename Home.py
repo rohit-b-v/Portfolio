@@ -25,10 +25,11 @@ st.set_page_config(
 )
 
 # --------------------------
-# Custom Styling
+# Custom Styling (Light & Dark Mode)
 # --------------------------
 st.markdown("""
     <style>
+        /* Default (Light Mode) */
         .main {
             background-color: #f7f9fc;
         }
@@ -44,6 +45,7 @@ st.markdown("""
         }
         .card {
             background-color: white;
+            color: #2c3e50;
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
@@ -61,6 +63,24 @@ st.markdown("""
         .stButton>button:hover {
             background-color: #3867d6;
             transform: scale(1.05);
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            .main {
+                background-color: #1e1e1e;
+            }
+            .title {
+                color: #f5f6fa;
+            }
+            .subtitle {
+                color: #dcdde1;
+            }
+            .card {
+                background-color: #2f3640;
+                color: #f5f6fa;
+                box-shadow: 0px 2px 8px rgba(255,255,255,0.05);
+            }
         }
     </style>
 """, unsafe_allow_html=True)
