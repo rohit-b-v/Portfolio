@@ -10,7 +10,7 @@ from langchain.prompts import PromptTemplate
 # Load environment variables
 # --------------------------
 load_dotenv()
-google_api_key = os.getenv("GOOGLE_API_KEY")
+google_api_key = st.secrets["GOOGLE_API_KEY"]
 
 # Initialize LLM model
 model = init_chat_model("gemini-2.5-flash", model_provider="google_genai", temperature=0)
