@@ -11,6 +11,8 @@ from langchain.prompts import PromptTemplate
 # --------------------------
 load_dotenv()
 google_api_key = st.secrets["GOOGLE_API_KEY"]
+import os
+os.environ["GOOGLE_API_KEY"] = google_api_key
 
 # Initialize LLM model
 model = init_chat_model("gemini-2.5-flash", model_provider="google_genai", temperature=0)
